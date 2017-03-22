@@ -1,6 +1,6 @@
 tcltaglib
 =====
-[Taglib] (https://taglib.github.io/) is a library for reading and editing 
+[Taglib](https://taglib.github.io/) is a library for reading and editing 
 the meta-data of several popular audio formats. Currently it supports both 
 ID3v1 and ID3v2 for MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis 
 comments in FLAC, MPC, Speex, WavPack TrueAudio, WAV, AIFF, MP4 and ASF files.
@@ -74,7 +74,7 @@ WINDOWS BUILD
 ## VS 2010  
 
 Build taglib and tcltaglib at Windows platform (* if puts in c:\projects),
-the first step is to install [CMake] (https://cmake.org/).
+the first step is to install [CMake](https://cmake.org/).
 
 Using CMake to create the zlib makefile:
 
