@@ -10,7 +10,8 @@ License:       BSD
 Group:         Development/Libraries/Tcl
 Source:        https://sites.google.com/site/ray2501/tcltaglib/tcltaglib_0.9.zip
 URL:           https://sites.google.com/site/ray2501/tcltaglib 
-Buildrequires: libtag1 tcl >= 8.4
+Buildrequires: libtag-devel tcl-devel >= 8.4
+Requires: libtag1 tcl >= 8.4
 BuildRoot:     %{buildroot}
 
 %description
