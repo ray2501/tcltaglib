@@ -39,34 +39,34 @@ TCL_DECLARE_MUTEX(myMutex);
 
 EXTERN int	Tcltaglib_Init(Tcl_Interp * interp);
 
-int TAGLIB_FILE_NEW _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_FILE_NEW_TYPE _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_FILE_IS_VALID _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_file_tag _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_FILE_SAVE _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_FILE_FREE _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
+int TAGLIB_FILE_NEW (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_FILE_NEW_TYPE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_FILE_IS_VALID (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_file_tag (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_FILE_SAVE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_FILE_FREE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
 
-int TAGLIB_AudioProperties _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
+int TAGLIB_AudioProperties (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
 
-int TAGLIB_TAG_FREE _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
+int TAGLIB_TAG_FREE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
 
-int TAGLIB_tag_title _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_tag_artist _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_tag_album _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_tag_comment _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_tag_genre _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_tag_year _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_tag_track _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
+int TAGLIB_tag_title (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_tag_artist (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_tag_album (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_tag_comment (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_tag_genre (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_tag_year (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_tag_track (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
 
-int TAGLIB_set_title _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_set_artist _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_set_album _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_set_comment _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_set_genre _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_set_year _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int TAGLIB_set_track _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
+int TAGLIB_set_title (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_set_artist (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_set_album (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_set_comment (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_set_genre (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_set_year (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int TAGLIB_set_track (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
 
-//void Tcltaglib_InitHashTable _ANSI_ARGS_(());
+//void Tcltaglib_InitHashTable ();
 void Tcltaglib_Thread_Exit(ClientData clientdata);
 
 /*

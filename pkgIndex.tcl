@@ -1,5 +1,5 @@
 #
 # Tcl package index file
 #
-package ifneeded tcltaglib 0.9 \
-    [list load [file join $dir libtcltaglib0.9.so] tcltaglib]
+package ifneeded tcltaglib 1.0 \
+    [list load [file join $dir libtcltaglib1.0.so] tcltaglib]

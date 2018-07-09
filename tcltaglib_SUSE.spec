@@ -4,8 +4,8 @@
 
 Name:          tcltaglib
 Summary:       Tcl interface for tablib
-Version:       0.9
-Release:       2
+Version:       1.0
+Release:       0
 License:       BSD
 Group:         Development/Libraries/Tcl
 Source:        %name-%version.tar.gz
