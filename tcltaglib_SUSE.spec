@@ -8,7 +8,7 @@ Version:       0.9
 Release:       2
 License:       BSD
 Group:         Development/Libraries/Tcl
-Source:        https://sites.google.com/site/ray2501/tcltaglib/tcltaglib_0.9.zip
+Source:        %name-%version.tar.gz
 URL:           https://sites.google.com/site/ray2501/tcltaglib 
 BuildRequires: autoconf
 BuildRequires: make
@@ -22,7 +22,7 @@ BuildRoot:     %{buildroot}
 Tcl interface for taglib (Abstract API only).
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}
 
 %build
 CFLAGS="%optflags" ./configure \
