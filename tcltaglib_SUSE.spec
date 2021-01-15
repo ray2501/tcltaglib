@@ -6,7 +6,7 @@ Name:          tcltaglib
 Summary:       Tcl interface for tablib
 Version:       1.0
 Release:       0
-License:       BSD
+License:       BSD-3-Clause
 Group:         Development/Libraries/Tcl
 Source:        %name-%version.tar.gz
 URL:           https://sites.google.com/site/ray2501/tcltaglib 
