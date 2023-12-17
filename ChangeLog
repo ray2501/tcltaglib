@@ -1,0 +1,58 @@
+2023-12-17  Danilo Chang  <ray2501@gmail.com>
+
+   * Setup version to v1.1
+   * Update tclconfig files
+   * Remove VS 2010 build files
+
+2018-11-08  Danilo Chang  <ray2501@gmail.com>
+
+   * win/makefile.vc: Update to correct version
+
+2018-07-09  Danilo Chang  <ray2501@gmail.com>
+
+   * Setup version to v1.0
+   * Remove _ANSI_ARGS_
+
+2016-12-14  Danilo Chang  <ray2501@gmail.com>
+
+   * Setup version to v0.9
+   * Upgrade TEA to 3.10
+
+2016-02-26  Danilo Chang  <ray2501@gmail.com>
+
+   * Setup version to v0.8
+   * Add more option check
+
+2016-02-20  Danilo Chang  <ray2501@gmail.com>
+
+   * Setup version to v0.7
+   * Setup version to v0.6
+   * Update source code
+
+
+2016-01-31  Danilo Chang  <ray2501@gmail.com>
+
+   * Setup version to v0.5
+   * Update ttaglib.c, use Tcl_TranslateFileName() to handle filename.
+
+
+2015-11-14  Danilo Chang  <ray2501@gmail.com>
+
+   * Update ttaglib.c, version setup to v0.4
+
+
+2015-11-05  Danilo Chang  <ray2501@gmail.com>
+
+   * Update ttaglib.c, version setup to v0.3
+
+
+2014-12-07  Danilo Chang  <ray2501@gmail.com>
+
+   * Update ttaglib.h, version v0.2
+
+
+2014-03-14  Danilo Chang  <ray2501@gmail.com>
+
+   * Initial version v0.1, copy from Sample extension
+
+
