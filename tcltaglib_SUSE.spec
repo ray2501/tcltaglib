@@ -15,7 +15,7 @@ BuildRequires: make
 BuildRequires: tcl-devel >= 8.4
 BuildRequires: libtag-devel
 Requires: tcl >= 8.4
-Requires: libtag1
+Requires: libtag2
 BuildRoot:     %{buildroot}
 
 %description
