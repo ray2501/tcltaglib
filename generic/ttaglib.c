@@ -18,13 +18,13 @@ void Tcltaglib_Thread_Exit(ClientData clientdata)
 
 
 int TAGLIB_FILE_NEW (ClientData clientData, Tcl_Interp *interp, 
-                     int objc, Tcl_Obj *CONST obj[])
+                     int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;
     char handleName[16 + TCL_INTEGER_SPACE];
     char *filename;
-    int len = 0;
+    Tcl_Size len = 0;
     int newvalue;
     Tcl_DString translatedFilename;
 
@@ -71,13 +71,13 @@ int TAGLIB_FILE_NEW (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_FILE_NEW_TYPE (ClientData clientData, Tcl_Interp *interp, 
-                          int objc, Tcl_Obj *CONST obj[])
+                          int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;
     char handleName[16 + TCL_INTEGER_SPACE];
     char *filename;
-    int len = 0;
+    Tcl_Size len = 0;
     int newvalue;
     Tcl_DString translatedFilename;
 
@@ -144,12 +144,12 @@ int TAGLIB_FILE_NEW_TYPE (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_FILE_IS_VALID (ClientData clientData, Tcl_Interp *interp,
-                          int objc, Tcl_Obj *CONST obj[])
+                          int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;
     char *handle = NULL;
-    int len = 0;
+    Tcl_Size len = 0;
 
     TagLib_File *file;
     
@@ -196,11 +196,11 @@ int TAGLIB_FILE_IS_VALID (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_FILE_SAVE (ClientData clientData, Tcl_Interp *interp, 
-                      int objc, Tcl_Obj *CONST obj[])
+                      int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle = NULL;
-    int len = 0;
+    Tcl_Size len = 0;
 
     TagLib_File *file;
     
@@ -244,11 +244,11 @@ int TAGLIB_FILE_SAVE (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_FILE_FREE (ClientData clientData, Tcl_Interp *interp, 
-                      int objc, Tcl_Obj *CONST obj[])
+                      int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle = NULL;
-    int len = 0;
+    Tcl_Size len = 0;
 
     TagLib_File *file;
     
@@ -295,11 +295,11 @@ int TAGLIB_FILE_FREE (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_TAG_FREE (ClientData clientData, Tcl_Interp *interp, 
-                     int objc, Tcl_Obj *CONST obj[])
+                     int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle = NULL;
-    int len = 0;
+    Tcl_Size len = 0;
     
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
       Tcl_GetThreadData(&dataKey, sizeof(ThreadSpecificData));
@@ -344,7 +344,7 @@ int TAGLIB_TAG_FREE (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_AudioProperties (ClientData clientData, Tcl_Interp *interp,
-                            int objc, Tcl_Obj *CONST obj[])
+                            int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *listobj = NULL;
@@ -357,7 +357,7 @@ int TAGLIB_AudioProperties (ClientData clientData, Tcl_Interp *interp,
     int samplerate;
     int channels;
     char *handle = NULL;
-    int len = 0;
+    Tcl_Size len = 0;
 
     TagLib_File *file;
     const TagLib_AudioProperties *properties;
@@ -424,14 +424,14 @@ int TAGLIB_AudioProperties (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_file_tag (ClientData clientData, Tcl_Interp *interp, 
-                     int objc, Tcl_Obj *CONST obj[])
+                     int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;
     char handleName[16 + TCL_INTEGER_SPACE];
     int newvalue;
     char *handle;
-    int len;
+    Tcl_Size len;
 
     TagLib_File *file;
     TagLib_Tag *tag;
@@ -486,12 +486,12 @@ int TAGLIB_file_tag (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_tag_title (ClientData clientData, Tcl_Interp *interp, 
-                      int objc, Tcl_Obj *CONST obj[])
+                      int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *str_obj;
     char *handle;
-    int len;
+    Tcl_Size len;
 
     TagLib_Tag *tag;
     char *string;
@@ -537,12 +537,12 @@ int TAGLIB_tag_title (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_tag_artist (ClientData clientData, Tcl_Interp *interp, 
-                       int objc, Tcl_Obj *CONST obj[])
+                       int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *str_obj;
     char *handle;
-    int len;
+    Tcl_Size len;
 
     TagLib_Tag *tag;
     char *string;
@@ -590,12 +590,12 @@ int TAGLIB_tag_artist (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_tag_album (ClientData clientData, Tcl_Interp *interp, 
-                      int objc, Tcl_Obj *CONST obj[])
+                      int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *str_obj;
     char *handle;
-    int len;
+    Tcl_Size len;
 
     TagLib_Tag *tag;
     char *string;
@@ -639,12 +639,12 @@ int TAGLIB_tag_album (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_tag_comment (ClientData clientData, Tcl_Interp *interp, 
-                        int objc, Tcl_Obj *CONST obj[])
+                        int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *str_obj;
     char *handle;
-    int len;
+    Tcl_Size len;
 
     TagLib_Tag *tag;
     char *string;
@@ -688,12 +688,12 @@ int TAGLIB_tag_comment (ClientData clientData, Tcl_Interp *interp,
 }
 
 
-int TAGLIB_tag_genre (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int TAGLIB_tag_genre (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *str_obj;
     char *handle;
-    int len;
+    Tcl_Size len;
 
     TagLib_Tag *tag;
     char *string;
@@ -739,12 +739,12 @@ int TAGLIB_tag_genre (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_O
 
 
 int TAGLIB_tag_year (ClientData clientData, Tcl_Interp *interp, 
-                     int objc, Tcl_Obj *CONST obj[])
+                     int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *int_obj;
     char *handle;
-    int len;
+    Tcl_Size len;
 
     TagLib_Tag *tag;
     int year;
@@ -788,12 +788,12 @@ int TAGLIB_tag_year (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_tag_track (ClientData clientData, Tcl_Interp *interp, 
-                      int objc, Tcl_Obj *CONST obj[])
+                      int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *int_obj;
     char *handle; 
-    int len;
+    Tcl_Size len;
 
     TagLib_Tag *tag;
     int track;
@@ -838,11 +838,11 @@ int TAGLIB_tag_track (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_set_title (ClientData clientData, Tcl_Interp *interp, 
-                      int objc, Tcl_Obj *CONST obj[])
+                      int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle;
-    int len;
+    Tcl_Size len;
     char *title;
 
     TagLib_Tag *tag;
@@ -889,11 +889,11 @@ int TAGLIB_set_title (ClientData clientData, Tcl_Interp *interp,
 
 
 int TAGLIB_set_artist (ClientData clientData, Tcl_Interp *interp, 
-                       int objc, Tcl_Obj *CONST obj[])
+                       int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle;
-    int len;
+    Tcl_Size len;
     char *artist;
 
     TagLib_Tag *tag;
@@ -939,11 +939,11 @@ int TAGLIB_set_artist (ClientData clientData, Tcl_Interp *interp,
 }
 
 int TAGLIB_set_album (ClientData clientData, Tcl_Interp *interp, 
-                      int objc, Tcl_Obj *CONST obj[])
+                      int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle;
-    int len;
+    Tcl_Size len;
     char *album;
     TagLib_Tag *tag;
     
@@ -987,11 +987,11 @@ int TAGLIB_set_album (ClientData clientData, Tcl_Interp *interp,
 }
 
 int TAGLIB_set_comment (ClientData clientData, Tcl_Interp *interp, 
-                        int objc, Tcl_Obj *CONST obj[])
+                        int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle;
-    int len;
+    Tcl_Size len;
     char *comment;
 
     TagLib_Tag *tag;
@@ -1037,11 +1037,11 @@ int TAGLIB_set_comment (ClientData clientData, Tcl_Interp *interp,
 }
 
 int TAGLIB_set_genre (ClientData clientData, Tcl_Interp *interp, 
-                      int objc, Tcl_Obj *CONST obj[])
+                      int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle;
-    int len;
+    Tcl_Size len;
     char *genre;
 
     TagLib_Tag *tag;
@@ -1086,11 +1086,11 @@ int TAGLIB_set_genre (ClientData clientData, Tcl_Interp *interp,
 }
 
 int TAGLIB_set_year (ClientData clientData, Tcl_Interp *interp, 
-                     int objc, Tcl_Obj *CONST obj[])
+                     int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle;
-    int len;
+    Tcl_Size len;
     int year;
 
     TagLib_Tag *tag;
@@ -1134,11 +1134,11 @@ int TAGLIB_set_year (ClientData clientData, Tcl_Interp *interp,
 }
 
 int TAGLIB_set_track (ClientData clientData, Tcl_Interp *interp, 
-                      int objc, Tcl_Obj *CONST obj[])
+                      int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     char *handle;
-    int len;
+    Tcl_Size len;
     int track;
     TagLib_Tag *tag;
     
