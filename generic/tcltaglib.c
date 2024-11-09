@@ -23,10 +23,7 @@ Tcltaglib_Init(Tcl_Interp *interp)
 {
     ThreadSpecificData *tsdPtr;
     
-    if (Tcl_InitStubs(interp, "8.4", 0) == NULL) {
-	return TCL_ERROR;
-    }
-    if (Tcl_PkgRequire(interp, "Tcl", "8.4", 0) == NULL) {
+    if (Tcl_InitStubs(interp, TCL_VERSION, 0) == NULL) {
 	return TCL_ERROR;
     }
     if (Tcl_PkgProvide(interp, PACKAGE_NAME, PACKAGE_VERSION) != TCL_OK) {
